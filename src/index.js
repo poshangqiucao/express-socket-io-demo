@@ -5,6 +5,9 @@ const io = require('socket.io')(server);
 const port = 3000
 io.on('connection', (socket) => { 
     console.log(socket.id);
+    // setTimeout(1000, () => {
+    //     socket.emit("timestamp", { "timestamp": new Date()});
+    // })
     socket.emit("hello", "world");
     socket.on("hello1", (args) => {
         console.log(args);
