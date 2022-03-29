@@ -14,6 +14,7 @@ io.on('connection', (socket) => {
     })
 });
 app.get('/', (req, res) => {
+    console.log(req);
     res.sendFile(__dirname+'/html/index.html')
 })
 
